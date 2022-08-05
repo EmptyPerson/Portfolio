@@ -1,38 +1,144 @@
-.App {
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+:root {
+  --black: #2b2a2c;
+  --white: #ffffff;
+  --gray-light: #dedede;
+  --gray: #6a696b;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 1.2rem 0;
+  position: relative;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user {
+  display: flex;
+}
+.user-avatar {
+  border-radius: 50%;
+}
+
+.user_content {
+  padding-left: 9px;
+}
+
+.user_name{
+  font-size: 1rem;
+  color: var(--black);
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.user_prof {
+  font-size: 0.75rem;
+  color: var(--black);
+  opacity: 0.7;
+}
+
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
+
+.nav_link {
+  margin-left: 2rem;
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  border-bottom: 2px solid black;
+  padding: 0 0 4px;
+}
+
+.random {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: center;
+}
+
+.random p {
+  font-size: 1rem;
+  color: var(--black);
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bars{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+}
+
+.text_bar {
+  display: flex;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.random_botton {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0 5px;
+}
+
+.clicker {
+  font-size: 1rem;
+  text-align: center;
   color: white;
+  background: #2b2a2c;
+  cursor: pointer;
+  border:#2b2a2c;
+  border-radius: 10px;
+  width: 100px;
+}
+.clicker:hover {
+  background: red;
 }
 
-.App-link {
-  color: #61dafb;
+.our_choice {
+  padding-top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
