@@ -1,63 +1,43 @@
 import './App.css';
-import {useState} from "react";
+import Navbar from "./components/Navbar/Navbar";
+
 
 function App() {
-    const [bars, setBars] = useState({
-        1: "Стрелка",
-        2: "Dictatura Estetica",
-        3: "Swan Lake Bar"
-    })
-    const [numberBar, setNumberBar] = useState()
-    const [active, setActive] = useState(false)
-
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
 
   return (
-      <header className="header">
-        <div className="container">
-            <div className="header_inner">
-                <div className="user">
-                    <img className="user-avatar" src='../images/avatar_photo.png' alt="sorry"/>
-                    <div className="user_content">
-                        <div className="user_name">Vladislav <br/> Bulakhov</div>
-                        <div className="user_prof">Front Web Developer</div>
-                    </div>
-                </div>
-                <div className="nav">
-                    <a className="nav_link" href="#">work</a>
-                    <a className="nav_link" href="#">about me</a>
-                    <a className="nav_link" href="#">blog</a>
-                    <a className="nav_link" href="#">contact</a>
-                </div>
-            </div>
-            <div className="random">
-                <div className="text_bar">
-                    <p>We choose our bar right now</p>
-                </div>
-                <div className="bars">
-                    <ol>
-                        <li>{bars[1]}</li>
-                        <li>{bars[2]}</li>
-                        <li>{bars[3]}</li>
-                    </ol>
-                </div>
-                <div className="random_botton">
-                    <button className="clicker"
-                    onClick={(e) => {
-                        e.preventDefault()
-                        setNumberBar(getRandomInt(3) + 1);
-                        setActive(true)
-                    }}
-                    >I choose it <br/> by random</button>
-                </div>
-                <div className="our_choice">
-                    {active? <p>Probably we're lucky - our bar  {`"${bars[numberBar]}"`}</p>: null}
-                </div>
-            </div>
-        </div>
-      </header>
+     <div>
+         <Navbar/>
+         <div className="intro">
+             <div className="container">
+                 <div className="intro_inner">
+                     <div className="intro_content">
+                         <h2 className="intro_subtitle">Hello I'm</h2>
+                         <h1 className="intro_title">Bulakhov Vladislav</h1>
+                         <div className="intro_text">Front Web Developer</div>
+                         <div className="social">
+                             <a className="social_link" href="https://t.me/seenager" target="_blank">
+                                 <img src="images/telegram.svg" alt="" className='git_favicon'/>
+                             </a>
+                             <a className="social_link" href="https://www.facebook.com/profile.php?id=100006243310002" target="_blank">
+                                 <img src="images/facebook.png" alt=""/>
+                             </a>
+                             <a className="social_link" href="https://instagram.com/bulakhov.v" target="_blank">
+                                 <img src="images/instagram.png" alt=""/>
+                             </a>
+                             <a className="social_link" href="https://github.com/EmptyPerson" target="_blank">
+                                    <img src="images/github.svg" alt="" className='git_favicon'/>
+                             </a>
+                         </div>
+
+                         <button className="btn" type="button">SEE MY RESUME</button>
+                     </div>
+                     <div className='photo-container'>
+                            <img className="intro_photo" src="images/photo.png" alt=""/>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
   );
 }
 
