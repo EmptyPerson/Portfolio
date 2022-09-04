@@ -1,0 +1,18 @@
+.reviews{
+    background: #332f30 url('reviews.png') center no-repeat;
+    padding: 3rem 0;
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.reviews_inner {
+    width:100%;
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.reviews_text {
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+}

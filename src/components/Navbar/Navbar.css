@@ -1,11 +1,5 @@
 .header {
     padding: 1.2rem 0;
-}
-
-
-
-.header {
-    padding: 1.2rem 0;
     position: relative;
 }
 
@@ -59,6 +53,25 @@
 .nav_link:hover {
     border-bottom: 2px solid black;
     padding: 0 0 4px;
+}
+
+@media (max-width: 1000px) {
+    .user {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
+    }
+
+    .nav_link {
+        margin: 0;
+        font-size: 1.2rem;
+    }
 }
 
 

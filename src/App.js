@@ -1,57 +1,56 @@
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
+import Work from "./components/Work/Work";
+import About from "./components/About/About";
+import Reviews from "./components/Reviews/Reviews";
+import Courses from "./components/Courses/Courses";
+import Footer from "./components/Footer/Footer";
+import {useRef} from "react";
+import {useState} from "react";
+import {ModalContext} from "./Context"
+import Modal from "./components/Modal/Modal";
 
 
 function App() {
+  const [modalActive, setModalActive] = useState(false)
+
+  const work = useRef(null);
+  const about = useRef(null);
+  const blog = useRef(null);
+
+  const scrollToSection = (elementRef) => {
+      window.scrollTo({
+          top: elementRef.current.offsetTop - 50,
+          behavior: 'smooth'
+      })
+  }
 
   return (
      <div>
-         <Navbar/>
-         <Intro/>
-         <div className="works">
-             <div className="container">
-                 <h3 className='text_center'>My works</h3>
-                 <div className="portfolio">
-                     <div className="work">
-                         <div className="work_logo">
-                            <h2 className='work_name'>HOTEL</h2>
-                         </div>
-                         <div className="work_content">
-                             <div className="work_cat">category: website</div>
-                             <div className="work_title">
-                                 HOTEL
-                                <div className="work_data">2022</div>
-                             </div>
-                         </div>
-                     </div>
-                     <div className="work">
-                         <div className="work_logo">
-                             <h2 className='work_name'>QUIZ</h2>
-                         </div>
-                         <div className="work_content">
-                             <div className="work_cat">category: website</div>
-                             <div className="work_title">
-                                 Quiz
-                                 <div className="work_data">2022</div>
-                             </div>
-                         </div>
-                     </div>
-                     <div className="work">
-                         <div className="work_logo">
-                             <h2 className='work_name'>crypto<br/>charts</h2>
-                         </div>
-                         <div className="work_content">
-                             <div className="work_cat">category: website</div>
-                             <div className="work_title">
-                                 crypto charts
-                                 <div className="work_data">2021</div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+         <ModalContext.Provider value={{
+             modalActive,
+             setModalActive
+         }}>
+             <Navbar props = {{
+                 refWork: work,
+                 refAbout: about,
+                 refBlog: blog,
+                 scrollToSection: scrollToSection
+             }}/>
+             <Intro/>
+             <Work props = {work}/>
+             <About props = {about}/>
+             <Reviews/>
+             <Courses props = {blog}/>
+             <Footer props = {{
+                 refWork: work,
+                 refAbout: about,
+                 refBlog: blog,
+                 scrollToSection: scrollToSection
+             }}/>
+             <Modal/>
+         </ModalContext.Provider>
      </div>
   );
 }

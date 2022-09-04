@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({props}) => {
     return (
         <header className="header">
             <div className="container">
@@ -14,10 +14,19 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="nav">
-                        <a className="nav_link" href="#">work</a>
-                        <a className="nav_link" href="#">about me</a>
-                        <a className="nav_link" href="#">blog</a>
-                        <a className="nav_link" href="#">contact</a>
+                        <a className="nav_link" href="work" onClick={(event) => {
+                            event.preventDefault()
+                            props.scrollToSection(props.refWork)
+                        }}>work</a>
+                        <a className="nav_link" href="about" onClick={(event) => {
+                            event.preventDefault()
+                            props.scrollToSection(props.refAbout)
+                        }}>about me</a>
+                        <a className="nav_link" href="blog" onClick={(event) => {
+                            event.preventDefault()
+                            props.scrollToSection(props.refBlog)
+                        }}>blog</a>
+                        <a className="nav_link" href="mailto:vladislav.bulahov@gmail.com">contact</a>
                     </div>
                 </div>
             </div>
