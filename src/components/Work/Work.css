@@ -2,7 +2,6 @@
 .work_logo {
     background: linear-gradient(to right, #56a8b4, #11dae9, #21f1f9, #08effa, #11dae9);
     height: 209px;
-    width: 370px;
     border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: center;
@@ -13,7 +12,9 @@
 }
 
 .work_name {
+    margin: 0 1rem;
     opacity: 0.7;
+    text-align: center;
     /*color: #413841;*/
 }
 
@@ -33,16 +34,23 @@
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .work {
+    width: calc((100% - 80px)/2);
     overflow: hidden;
     box-shadow: 0 0 4px black;
     border-radius: 10px;
     margin-bottom: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
+.work:nth-child(2n-1){
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .work:hover {
     box-shadow: 0 0 25px black;
 }
@@ -77,12 +85,7 @@
 @media(max-width: 1199px) {
     .work {
         width: 100%;
-        margin: 1rem auto;
         border-radius: 1.5rem;
-    }
-
-    .work_logo {
-        width: 100%;
     }
 
     .work_cat {

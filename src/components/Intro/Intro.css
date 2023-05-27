@@ -1,6 +1,7 @@
 .intro_inner {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
     border-bottom: 1px solid black
 }
 
@@ -8,6 +9,7 @@
     color: var(--black);
     font-weight: 200;
     font-size: 2rem;
+    width: 100%;
 }
 
 .intro_title {
@@ -15,21 +17,27 @@
     font-weight: bold;
     font-size: 3rem;
     margin-bottom: 5px;
+    width: 100%;
 }
 
 .intro_text {
     color: var(--black);
     font-size: 1.2rem;
     opacity: 0.7;
+    width: 100%;
 }
 .intro_content {
     padding-top: 6.6rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .social {
     margin-top: 2rem;
     margin-bottom: 2.5rem;
     display: flex;
+    width: 100%;
 }
 
 .social_link {
@@ -76,11 +84,22 @@
     z-index: 1;
     margin-bottom: 1rem;
     border-radius: 30px;
+    object-fit: cover;
 }
 
 .photo-container {
     display: flex;
     height: 650px;
-    margin-left: auto;
+    width: 100%;
 }
 
+.photo-container img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media  screen and (max-width: 1000px) {
+    .intro_content {
+        margin-right: 10rem;
+    }
+}

@@ -6,15 +6,19 @@ import About from "./components/About/About";
 import Reviews from "./components/Reviews/Reviews";
 import Courses from "./components/Courses/Courses";
 import Footer from "./components/Footer/Footer";
-import {useRef} from "react";
+import {Fragment, useRef} from "react";
 import {useState} from "react";
 import {ModalContext} from "./Context"
 import Modal from "./components/Modal/Modal";
 
-
 function App() {
   const [modalActive, setModalActive] = useState(false)
-
+  const setModalOpen = () => {
+      setModalActive(prevState => {
+          document.body.style.overflow = prevState ? 'auto' : 'hidden'
+            return !prevState
+      })
+  }
   const work = useRef(null);
   const about = useRef(null);
   const blog = useRef(null);
@@ -27,10 +31,10 @@ function App() {
   }
 
   return (
-     <div>
+     <Fragment>
          <ModalContext.Provider value={{
              modalActive,
-             setModalActive
+             setModalActive: setModalOpen
          }}>
              <Navbar props = {{
                  refWork: work,
@@ -51,7 +55,7 @@ function App() {
              }}/>
              <Modal/>
          </ModalContext.Provider>
-     </div>
+     </Fragment>
   );
 }
 

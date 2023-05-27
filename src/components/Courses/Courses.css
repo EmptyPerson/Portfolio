@@ -48,6 +48,7 @@
     font-size: 0.75rem;
     color: var(--gray);
     margin-bottom: 1.5rem;
+    color: rgba(115, 63, 203, 0.16)
 }
 
 .course_text {

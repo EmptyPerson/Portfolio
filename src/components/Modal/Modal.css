@@ -74,8 +74,13 @@
     position: relative;
     height: inherit;
     width: inherit;
-
 }
+
+.cl-btn-container {
+    padding: 20px 0;
+    top: -20px;
+}
+
 .cl-btn-2 .leftright {
     height: inherit;
     width: inherit;
