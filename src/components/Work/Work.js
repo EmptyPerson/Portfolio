@@ -8,6 +8,21 @@ const Work = ({props}) => {
                 <h3 className='text_center'>My projects</h3>
                 <div className="portfolio">
                     <div className="work">
+                        <a href="https://scooter-rental-bali.web.app/" className="project-link" target="_blank"
+                           rel="noreferrer">
+                            <div className="work_logo">
+                                <h2 className='work_name'>scooter<br/>rental</h2>
+                            </div>
+                            <div className="work_content">
+                                <div className="work_cat">category: website</div>
+                                <div className="work_title">
+                                    Freelance task. Website for scooter rental
+                                    <div className="work_data">2023</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div className="work">
                         <a href="https://hackerstoriesapp.web.app" className="project-link" target="_blank"
                            rel="noreferrer">
                             <div className="work_logo">
@@ -37,8 +52,6 @@ const Work = ({props}) => {
                             </div>
                         </a>
                     </div>
-
-
                     <div className="work">
                         <a href="https://roadhomezn.web.app" className="project-link" target="_blank" rel="noreferrer">
                             <div className="work_logo">
@@ -81,21 +94,6 @@ const Work = ({props}) => {
                                 <div className="work_title">
                                     Make crypto charts
                                     <div className="work_data">2021</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="work">
-                        <a href="https://scooter-rental-bali.web.app/" className="project-link" target="_blank"
-                           rel="noreferrer">
-                            <div className="work_logo">
-                                <h2 className='work_name'>scooter<br/>rental</h2>
-                            </div>
-                            <div className="work_content">
-                                <div className="work_cat">category: website</div>
-                                <div className="work_title">
-                                    Freelance task. Website for scooter rental
-                                    <div className="work_data">2023</div>
                                 </div>
                             </div>
                         </a>

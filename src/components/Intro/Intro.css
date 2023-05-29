@@ -29,8 +29,9 @@
 .intro_content {
     padding-top: 6.6rem;
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    width: 50%;
+    padding-right: 2rem;
 }
 
 .social {
@@ -90,16 +91,16 @@
 .photo-container {
     display: flex;
     height: 650px;
-    width: 100%;
+    width: 50%;
 }
 
 .photo-container img {
     max-height: 100%;
-    max-width: 100%;
+    width: 100%;
 }
 
 @media  screen and (max-width: 1000px) {
     .intro_content {
-        margin-right: 10rem;
+
     }
 }
